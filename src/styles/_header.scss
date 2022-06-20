@@ -3,10 +3,7 @@
   justify-content: space-between;
   margin-bottom: 2rem;
   &-main {
-    input {
-      background-color: #ede6e6;
-      border-radius: 12px;
-    }
+    position: relative;
   }
   &-content {
     display: flex;

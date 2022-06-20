@@ -1,0 +1,101 @@
+.modal-filter {
+  &-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    .container {
+      width: 634px;
+      height: 454px;
+      border-radius: 12px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+
+      .modal-filter-title {
+        .heading {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 30px;
+          color: $text;
+          text-align: center;
+        }
+      }
+      .modal-filter-body {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin: 2.7rem 0;
+        .date-time {
+          display: flex;
+          gap: 10rem;
+          .modal-filter-body-box {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+          }
+        }
+        .status {
+          .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+            gap: 1rem;
+          }
+          &-box {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            p {
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 20px;
+              color: $text;
+            }
+          }
+        }
+        .check-in {
+          .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            gap: 0.8rem;
+          }
+          &-box {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            p {
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 20px;
+              color: $text;
+            }
+          }
+        }
+      }
+      .modal-filter-footer {
+        display: flex;
+        justify-content: center;
+        .btn-filter {
+          padding: 11px 30px;
+          border: 1px solid #ff993c;
+          border-radius: 8px;
+          color: #ff993c;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 26px;
+          background-color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

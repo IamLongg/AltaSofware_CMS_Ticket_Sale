@@ -1,6 +1,7 @@
 import React from "react";
 import Menubar from "../layouts/MenuBar";
 import Header from "../layouts/Header";
+import ListTicketPackage from "./ListTicketPackage";
 const Setting = () => {
   return (
     <>
@@ -8,6 +9,7 @@ const Setting = () => {
         <Menubar />
         <main className="main-wrap">
           <Header />
+          <ListTicketPackage />
         </main>
       </div>
     </>

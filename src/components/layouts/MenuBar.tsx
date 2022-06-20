@@ -45,7 +45,7 @@ const Menubar = () => {
                 ? "menubar-main-box active setting"
                 : "menubar-main-box setting"
             }
-            to="/manage-role"
+            to="/setting"
           >
             <img src={imgcd} alt="" className="iconsetting" />
             Cài đặt
@@ -54,7 +54,7 @@ const Menubar = () => {
                 <li>
                   <NavLink
                     className={({ isActive }) => (isActive ? "active " : "")}
-                    to="/manage-role"
+                    to="/setting-services"
                   >
                     Gói dịch vụ
                   </NavLink>

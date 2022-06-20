@@ -1,0 +1,68 @@
+.modal-change-ticket {
+  &-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    .container {
+      width: 758px;
+      height: 365px;
+      border-radius: 12px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      .modal-change-ticket-title {
+        .heading {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 30px;
+          color: $text;
+          text-align: center;
+        }
+      }
+      .modal-change-ticket-body {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin: 3rem 0;
+        &-box {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          h3 {
+            width: 25%;
+          }
+        }
+      }
+      .modal-change-ticket-footer {
+        display: flex;
+        justify-content: center;
+        gap: 2.4rem;
+        .btn-change-ticket {
+          padding: 11px 62px;
+          border: 1px solid #ff993c;
+          border-radius: 8px;
+          color: #ff993c;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 26px;
+          background-color: #fff;
+          cursor: pointer;
+        }
+        .save {
+          background-color: #ff993c;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

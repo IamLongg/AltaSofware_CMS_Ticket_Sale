@@ -41,26 +41,24 @@
     .setting {
       .navigation {
         position: absolute;
-        right: -30%;
+        left: 40%;
         bottom: -10%;
         background-color: $white;
         border-bottom-right-radius: 1.2rem;
         border-top-right-radius: 1.2rem;
-        width: 100%;
+
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.2s linear, visibility 0.2s linear;
         z-index: 2;
         ul {
+          display: inline-block;
           li {
             list-style: none;
-            &:hover {
-              background-color: $bg-orange-light;
-            }
             a {
               padding: 1.2rem;
               @include title(1.6rem);
-              display: block;
+              display: inline-block;
               &.active {
                 background-color: $orange;
                 color: $white;

@@ -1,6 +1,109 @@
 .chart {
   background-color: #fff;
   border-radius: 2.4rem;
-  width: 100%;
-  height: 50vh;
+  &-main {
+    padding: 2.4rem 5rem 5.3rem 2.4rem;
+    &-box {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      .heading {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: $text;
+      }
+      .date {
+        display: flex;
+
+        align-items: center;
+        gap: 1.4rem;
+        padding: 0.9rem 1.2rem;
+        border: 0.1rem solid #e6e0e0;
+        cursor: pointer;
+        span {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 22px;
+          color: $text;
+          &:last-child {
+            color: $yellow_1;
+          }
+        }
+      }
+    }
+    .chart-line {
+      margin-bottom: 4rem;
+      .home-line-chart {
+        box-sizing: border-box;
+        display: block;
+        height: 300px;
+        width: 1004px;
+      }
+    }
+    .date-select {
+      position: absolute;
+      top: 23%;
+      right: 9%;
+      float: right;
+      width: 20%;
+      flex-direction: column;
+      background-color: #fff;
+      padding: 2.4rem 3.2rem;
+      box-shadow: 4px 4px 45px rgba(109, 46, 0, 0.35);
+      border-radius: 20px;
+      .date-moment {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        margin-bottom: 1.95rem;
+        h4 {
+          margin: 0;
+        }
+      }
+      .input-select {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        &-box {
+          display: flex;
+          gap: 1.4rem;
+        }
+      }
+      .sdp {
+        width: 100%;
+      }
+      .sdp--dates-grid {
+        gap: 1.5rem;
+      }
+      .sdp--date-btn__selected {
+        background-color: $yellow_1;
+      }
+      .sdp--date-btn__selected {
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        border-radius: 50%;
+      }
+    }
+    .desc {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: $text;
+    }
+    .sub-desc {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      color: $text;
+      span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        color: $text;
+      }
+    }
+  }
 }
