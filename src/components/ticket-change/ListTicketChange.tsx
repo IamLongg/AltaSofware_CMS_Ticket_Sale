@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { Pagination } from "antd";
+import data from "../data/dataTicket";
+
 const ListTicketChange: React.FC = () => {
+  const [items, setItems] = useState(data);
   return (
     <>
       <section className="list-ticket-change">
@@ -19,7 +22,7 @@ const ListTicketChange: React.FC = () => {
               </span>
             </div>
             <div className="list-ticket-change-main-func-filter-export">
-              <div className="list-ticket-change-filter btn">
+              <div className="list-ticket-change-filter btn save">
                 <p>Chốt đổi soát</p>
               </div>
             </div>
@@ -38,29 +41,22 @@ const ListTicketChange: React.FC = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>205314876321</td>
-                  <td>Hội chợ triển lãm tiêu dùng 2021</td>
-                  <td>14/04/2021</td>
-                  <td>Vé cổng</td>
-                  <td>Cổng 1</td>
-                  <td>
-                    <span>Chưa đối soát</span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>2</td>
-                  <td>205314801225</td>
-                  <td>Hội chợ triển lãm tiêu dùng 2021</td>
-                  <td>14/04/2021</td>
-                  <td>Vé cổng</td>
-                  <td>Cổng 1</td>
-                  <td>
-                    <span>Chưa đối soát</span>
-                  </td>
-                </tr>
+                {items &&
+                  items.map((item) => {
+                    return (
+                      <tr>
+                        <td>{item.id}</td>
+                        <td>{item.sove}</td>
+                        <td>{item.tensukien}</td>
+                        <td>{item.ngaysudung}</td>
+                        <td>{item.loaive}</td>
+                        <td>{item.congcheckin}</td>
+                        <td>
+                          <span>{item.action}</span>
+                        </td>
+                      </tr>
+                    );
+                  })}
               </tbody>
             </table>
           </div>
